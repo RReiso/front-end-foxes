@@ -1,10 +1,15 @@
 //print every third number from 1 to 20:
 function printNumber() {
+  resultArray=[];
 	for (let i = 1; i < 21; i = i + 3) {
+    resultArray.push(i); //push the number to resulting array
 		console.log(i);
 	}
+  console.log(resultArray);
 }
 printNumber(); //calling function 
+
+
 
 //print every third number from an array:
 const printEveryThird = (array) => {
