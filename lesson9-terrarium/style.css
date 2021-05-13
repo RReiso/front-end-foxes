@@ -18,7 +18,7 @@ h1 {
 	position: absolute;
 	height: 100%;
 	padding: 0 0.5rem;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 #left-container {
@@ -41,11 +41,11 @@ h1 {
 .plant {
 	position: absolute;
 	max-width: 90%;
-	z-index: 2;
 	margin-left: auto;
 	margin-right: auto;
-	left: 0;
-	right: 0;
+	/* left: 0;
+	right: 0; */
+  
 }
 
 .jar-walls {
@@ -57,7 +57,7 @@ h1 {
 	bottom: 0.5%;
 	left: 22.5%;
 	opacity: 0.5;
-	z-index: 1;
+	z-index: -100;
 }
 
 .jar-top {
@@ -68,7 +68,7 @@ h1 {
 	bottom: 70.5%;
 	left: 27.5%;
 	opacity: 0.7;
-	z-index: 1;
+	z-index: -100;
 }
 
 .jar-bottom {
@@ -79,6 +79,7 @@ h1 {
 	bottom: 0%;
 	left: 27.5%;
 	opacity: 0.7;
+  z-index: -100;
 }
 
 .jar-glossy-long {
@@ -110,7 +111,7 @@ h1 {
 	bottom: 1%;
 	left: 22.5%;
 	opacity: 0.7;
-	z-index: -1;
+	z-index: -100;
 }
 
 @media (max-width: 480px) {
