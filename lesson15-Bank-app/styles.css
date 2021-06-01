@@ -5,7 +5,7 @@ html {
 	box-sizing: border-box;
 	font-size: 100%;
   --color-grey: #454246;
-  --color-dark-green:rgba(44, 110, 18, 0.644);
+  --color-dark-green:rgb(20, 133, 5);
 }
 
 *,
@@ -74,13 +74,18 @@ section{
  }
 
  button{
-   padding: 0.4rem 2rem 0.25rem;
+   padding: 0.75rem 2rem;
    font-size: 1rem;
    align-self: center;
    margin-bottom: 1rem;
-   border-radius: 2px;
+   border-radius: 7px;
    background-color: var(--color-dark-green);
    text-transform: uppercase;
    font-weight: bold;
    color: whitesmoke;
+   cursor: pointer;
+ }
+
+ button:hover{
+   opacity: 0.7;
  }
