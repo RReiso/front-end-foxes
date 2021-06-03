@@ -9,7 +9,9 @@ const routes = {
 
 function updateRoute() {
 	const path = window.location.pathname;
+  console.log(path);
 	const route = routes[path];
+  console.log(route);
 
 	if (!route) {
 		return navigate("/login");
@@ -26,6 +28,12 @@ function updateRoute() {
 	title.innerHTML =
 		route.templateId.charAt(0).toUpperCase() + route.templateId.slice(1);
 	console.log(title.innerHTML + " is shown.");
+
+   if (typeof route.init === "function") {
+			route.init();
+		}
+
+		document.title = route.title;
 }
 
 function navigate(path) {
