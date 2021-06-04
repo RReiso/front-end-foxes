@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank App</title>
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div id="app">Loading...</div>
 
     <template id="login">
-      <h1>Bank App</h1>
+      <img class="logo" src="./images/leaf.svg" alt="Green Leaf Banking Logo">
+      <h1>Green Leaf Banking</h1>
       <section>
         <h2>Login</h2>
         <form id="loginForm">
@@ -18,7 +20,7 @@
           <input id="username" name="user" type="text">
           <button>Login</button>
         </form>
-        <hr/>
+        <p class="login-separator">OR</p>
         <h2>Register</h2>
         <form id="registerForm" action="javascript:register()">
           <label for="user">Username (required)</label>
@@ -37,7 +39,7 @@
     <template id="dashboard">
       <header>
         <h1>Bank App</h1>
-        <a href="/login" onclick="onLinkClick(event)">Logout</a>
+        <button onclick="logout()">Logout</button>
       </header>
       <section>
         Balance: 100$
