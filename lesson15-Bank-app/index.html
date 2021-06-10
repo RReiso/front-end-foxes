@@ -15,7 +15,7 @@
       <h1>Green Leaf Banking</h1>
       <section>
         <h2>Login</h2>
-        <form id="loginForm" action="javascript:login()>
+        <form id="loginForm" action="javascript:login()">
           <label for="username">Username</label>
           <input id="username" name="user" type="text">
           <button>Login</button>
@@ -42,8 +42,9 @@
         <button onclick="logout()">Logout</button>
       </header>
       <section>
-        Balance:
+         Balance: <span id="balance"></span><span id="currency"></span>
       </section>
+      <h2 id="description"></h2>
       <section>
         <button onclick="addTransaction()">Add transaction</button>
         <h2>Transactions</h2>
@@ -55,22 +56,29 @@
               <th>Amount</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody id="transactions"></tbody>
         </table>
       </section>
-       <div id="transactionsDialog">
+       <div id="transactionsDialog" class="hide">
         <h2>Add transaction</h2>
-        <form id="transactionForm" action="javascript:makeTransaction()">
+        <form class="transaction-form" id="transactionForm" action="javascript:doTransaction()">
           <label for="date">Date</label> 
           <input id="date" name="date" type="date" required>
-          <label for="transaction-description">Description</label> 
-          <input id="transaction-description" name="transaction-description" type="text" required>
+          <label for="object">Object</label> 
+          <input id="object" name="object" type="text" required>
           <label for="amount">Amount (use negative value for debit)</label> 
           <input id="amount" name="amount" type="number" value="0" step="any" required>
           <div id="transaction-error" class="error" role="alert"></div>
-            <button type="button"> Confirm</button>
+          <button> Confirm</button>
         </form>
     </div>
+    </template>
+     <template id="transaction">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
     </template>
   </body>
 </html>
