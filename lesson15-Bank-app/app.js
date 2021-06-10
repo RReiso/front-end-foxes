@@ -83,6 +83,23 @@ async function createAccount(account) {
 	}
 }
 
+//Sending a POST request to create a new transaction
+async function postTransaction(user, data) {
+	try {
+		const response = await fetch(
+			serverBaseUrl + "/accounts/" + user + "/transactions",
+			{
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: data,
+			}
+		);
+		return await response.json();
+	} catch (error) {
+		return { error: error.message || "Unknown error" };
+	}
+}
+
 //***STATE***//
 
 //state that represents user account's current data:
@@ -155,6 +172,7 @@ function logout() {
 
 //Add text or node to the element:
 function updateElement(id, textOrNode) {
+  console.log(id);
 	const element = document.getElementById(id);
 	element.textContent = "";
 	element.append(textOrNode);
@@ -201,6 +219,48 @@ function updateDashboard() {
 		transactionsRows.appendChild(transactionRow);
 	}
 	updateElement("transactions", transactionsRows);
+}
+
+
+//***TRANSACTIONS***//
+
+function addTransaction(){
+  //clear form inputs
+  document.querySelector("#transactionForm").reset();
+
+  //show dialog
+  const transactionsDialog = document.querySelector("#transactionsDialog");
+  transactionsDialog.classList.remove("hide");
+  transactionsDialog.classList.add("display");
+}
+
+async function doTransaction() {
+	const transactionsDialog = document.querySelector("#transactionsDialog");
+	const transactionForm = document.querySelector("#transactionForm");
+
+	transactionsDialog.classList.add("hide");
+	transactionsDialog.classList.remove("display");
+
+	const formData = new FormData(transactionForm);
+  const data = Object.fromEntries(formData);
+	const jsonData = JSON.stringify(data);
+  console.log(state.account.user)
+  console.log(jsonData)
+	const result = await postTransaction(state.account.user, jsonData);
+
+	if (result.error) {
+		return updateElement("transactionError", result.error);
+	}
+
+	const accountData = {
+		...state.account,
+		balance: state.account.balance + result.amount,
+		transactions: [...state.account.transactions, result],
+	};
+	updateState("account", accountData);
+
+	//Display user's account data according to the current state:
+	updateDashboard();
 }
 
 //Create a row for a new transaction:
