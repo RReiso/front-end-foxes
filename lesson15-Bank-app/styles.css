@@ -89,3 +89,19 @@ section{
  button:hover{
    opacity: 0.7;
  }
+
+ .display{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .hide{
+   display:none;
+ }
+
+ .transaction-form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
