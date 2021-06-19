@@ -1,15 +1,19 @@
+
 const Projects = ({ projects }) => {
 	return (
-		<div>
+		<section>
+			<h2>Projects</h2>
 			{projects.map((project) => (
-				<section>
+				<div>
 					<h3>{project.title}</h3>
+					<img src={project.img} alt="Project Screenshot" />
 					<p>{project.info}</p>
+					<p>{project.info2}</p>
 					<a href={project.url}>View {project.title} live!</a>
 					<a href={project.repo}>{project.title} on Github!</a>
-				</section>
+				</div>
 			))}
-		</div>
+		</section>
 	);
 };
 

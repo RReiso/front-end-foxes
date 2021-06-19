@@ -5,7 +5,7 @@ const Hero = ({ hero }) => {
 	return (
 		<section className="hero">
 			<div className="hero__container">
-				<h1 className="hero__title">
+				<h1>
 					{hero.title || "Hi, my name is "}
 					<span>{hero.name || "Your name"}</span>
 					<br />
