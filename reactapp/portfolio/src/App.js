@@ -23,19 +23,19 @@ function App() {
 	useEffect(() => {
 		setHero({ ...heroData });
 		setAbout({ ...aboutData });
-		setProject({ ...projectsData });
+		setProject([...projectsData]);
 		setContact({ ...contactData });
-		setFooter({ ...footerData });
+		setFooter([...footerData]);
 	}, []);
 
 	return (
-		<div>
+		<>
 			<Hero hero={hero} />
 			<About about={about} />
 			<Projects projects={projects} />
 			<Contact contact={contact} />
 			<Footer footer={footer} />
-		</div>
+		</>
 	);
 }
 
