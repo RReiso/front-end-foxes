@@ -5,17 +5,17 @@ const Projects = ({ projects }) => {
 			<h2>Projects</h2>
 			<div className="projects__all">
 				{projects.map((project) => (
-					<div className="projects__all--project__container">
+					<div className="project">
 						<h3>{project.title}</h3>
 						<img
-							className="project__container__img"
+							className="project__img"
 							src={project.img}
 							alt="Project Screenshot"
 						/>
 						<p>{project.info}</p>
-						<p>{project.info2}</p>
-						<a href={project.url}>View {project.title} live!</a>
-						<a href={project.repo}>{project.title} on Github!</a>
+						<p className="project__tech-stack">{project.info2}</p>
+						<a className="link" href={project.url}>View live</a>
+						<a className="link" href={project.repo}>View on Github</a>
 					</div>
 				))}
 			</div>

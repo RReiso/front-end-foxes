@@ -1,11 +1,9 @@
 const Contact = ({contact}) => {
 	return (
-		<section>
-      <h2>Contact </h2>
-			<p className="contact">
-				<a href={"mailto:" + contact.email}>
-					Write me an email!
-				</a>
+		<section className="contact">
+			<h2>Contact </h2>
+			<p>
+				Let's get in touch - <a className="link" href={"mailto:" + contact.email}>write an email!</a>
 			</p>
 		</section>
 	);
