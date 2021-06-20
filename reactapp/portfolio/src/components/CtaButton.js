@@ -1,11 +1,11 @@
 import { Link } from "react-scroll";
 
 const CtaButton = ({ cta }) => (
-	<div className="hero__cta">
+	<button className="hero__container__cta">
 		<Link to="contact" smooth-duration={1000}>
 			{cta}
 		</Link>
-	</div>
+	</button>
 );
 
 export default CtaButton;
