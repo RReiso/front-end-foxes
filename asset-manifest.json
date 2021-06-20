@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/front-end-foxes/reactapp/portfolio/static/css/main.24ee56fe.chunk.css",
+    "main.js": "/front-end-foxes/reactapp/portfolio/static/js/main.849346b6.chunk.js",
+    "main.js.map": "/front-end-foxes/reactapp/portfolio/static/js/main.849346b6.chunk.js.map",
+    "runtime-main.js": "/front-end-foxes/reactapp/portfolio/static/js/runtime-main.5265717d.js",
+    "runtime-main.js.map": "/front-end-foxes/reactapp/portfolio/static/js/runtime-main.5265717d.js.map",
+    "static/js/2.921a5607.chunk.js": "/front-end-foxes/reactapp/portfolio/static/js/2.921a5607.chunk.js",
+    "static/js/2.921a5607.chunk.js.map": "/front-end-foxes/reactapp/portfolio/static/js/2.921a5607.chunk.js.map",
+    "static/js/3.d3f94cfe.chunk.js": "/front-end-foxes/reactapp/portfolio/static/js/3.d3f94cfe.chunk.js",
+    "static/js/3.d3f94cfe.chunk.js.map": "/front-end-foxes/reactapp/portfolio/static/js/3.d3f94cfe.chunk.js.map",
+    "index.html": "/front-end-foxes/reactapp/portfolio/index.html",
+    "static/css/main.24ee56fe.chunk.css.map": "/front-end-foxes/reactapp/portfolio/static/css/main.24ee56fe.chunk.css.map",
+    "static/js/2.921a5607.chunk.js.LICENSE.txt": "/front-end-foxes/reactapp/portfolio/static/js/2.921a5607.chunk.js.LICENSE.txt",
+    "static/media/1.0e66c73f.png": "/front-end-foxes/reactapp/portfolio/static/media/1.0e66c73f.png",
+    "static/media/2.34a70b9d.png": "/front-end-foxes/reactapp/portfolio/static/media/2.34a70b9d.png",
+    "static/media/3.380bb6a4.png": "/front-end-foxes/reactapp/portfolio/static/media/3.380bb6a4.png",
+    "static/media/about.133c4459.jpg": "/front-end-foxes/reactapp/portfolio/static/media/about.133c4459.jpg",
+    "static/media/index.scss": "/front-end-foxes/reactapp/portfolio/static/media/hero_bg.b033fd1c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5265717d.js",
+    "static/js/2.921a5607.chunk.js",
+    "static/css/main.24ee56fe.chunk.css",
+    "static/js/main.849346b6.chunk.js"
+  ]
+}
